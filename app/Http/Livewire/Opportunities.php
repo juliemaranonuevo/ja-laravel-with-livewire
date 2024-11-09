@@ -10,6 +10,8 @@ class Opportunities extends Component
 {
     use WithPagination;
 
+    public $layout = 'layouts.app';
+
     public $perPage = 20;
     public $options = [20, 50, 100, 250];
     protected $queryString = ['perPage'];
