@@ -34,8 +34,8 @@ class Opportunities extends Component
             $query->where('name', 'like', "%{$this->search}%");
         }
 
-        $items = $query->orderBy('name', $this->sort);
-        $items = $items->paginate($this->perPage);
+        $query = $query->orderBy('name', $this->sort);
+        $items = $query->paginate($this->perPage);
 
         return view('livewire.opportunities', [
             'items' => $items
